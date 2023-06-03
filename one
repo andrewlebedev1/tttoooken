@@ -1,0 +1,1 @@
+function distributeTokens() public onlyOwner { require(now >= distributionTime); require(token.balanceOf(this) > 0); uint256 tokensToDistribute = token.balanceOf(this).div(totalNumberOfRecipients); for (uint i = 0; i < recipients.length; i++) { token.transfer(recipients[i], tokensToDistribute); }}
